@@ -25,9 +25,11 @@ const Verify = () => {
     }
   };
 
-  useEffect(()=>{
-    verifyPayment();
-  },[])
+  useEffect(() => {
+    if (url) {
+      verifyPayment();
+    }
+  }, [url]);
 
   return (
     <session>
